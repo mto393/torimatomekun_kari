@@ -29,6 +29,7 @@ class Home extends Component {
 
   componentDidMount(){
     /*  とりまとめデータを取得する  */
+    /*
     fetch('https://torimatomekun/history')
     .then(response => response.json())
     .then(data =>
@@ -43,15 +44,18 @@ class Home extends Component {
         //error
       })
     )
+    */
   }
 
   render() {
+    /*
     const { error, isLoaded } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
+      */
       return(
         <Container>
           <CreateButton onClick={e => this.click(e)} primary>新規作成</CreateButton>
@@ -59,7 +63,9 @@ class Home extends Component {
           <HistoryTable title={tableTtlTxt} data={tableData}></HistoryTable>
         </Container>
       )
+      /*
     }
+    */
   }
 }
 
